@@ -1,10 +1,13 @@
 import Button from "../button/Button";
-import "./Card.css";
+import cardStyle from "./card.module.css";
 
-const Card = () => {
+const Card = ({img, btnName, dil}) => {
   return (
-    <div>Card
-        <Button/>
+    <div>
+        <h1 className={cardStyle["tittle"]}>{dil}</h1>
+        <img className={cardStyle["images"]} src={img} alt="resim" />
+        
+        <Button btnName={btnName} />
     </div>
   )
 }

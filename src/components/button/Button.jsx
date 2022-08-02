@@ -1,8 +1,10 @@
-import "./Button.css";
+import btnStyle from "./button.module.css";
 
-const Button = () => {
+const Button = ({btnName}) => {
   return (
-    <div>Button</div>
+    <div className={btnStyle["tittle"]}>
+        <button className={btnStyle["btn-blue}"]}>{btnName}</button>
+    </div>
   )
 }
 

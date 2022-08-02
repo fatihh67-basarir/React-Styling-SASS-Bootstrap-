@@ -1,12 +1,24 @@
 
 import './App.css';
-import Button from './components/button/Button';
+
 import Card from './components/card/Card';
+import data from './util/data';
+
 
 function App() {
+  console.log(data);
   return (
     <div className="App">
-      <Card/>
+      
+      {data.map((item) => {
+        const {id,img,btnName,dil} = item;
+        return (
+          <Card key={id} img={img} btnName={btnName} dil={dil} />
+        )
+
+
+      })}
+      
       
     </div>
   );
